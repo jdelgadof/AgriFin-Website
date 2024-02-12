@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+h1 {
+  width: 25%;
+}
+
+nav {
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px 0 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "header header" "sidebar main";
+  gap: 20px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+main {
+  grid-area: main;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem 0 0 0;
+}
+
+.first,
+.second,
+.third {
+  padding: 20px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  padding: 1rem;
+}
+
+section article figure img {
+  width: 30%;
+  margin: 1rem 0 0 0;
+}
+
+img {
+  border-radius: 18px 18px 18px 18px;
+  width: 80%;
+  height: auto;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  flex-wrap: inherit;
+  width: 100%;
+  margin: 0;
+}
+
+ul li {
+  text-align: center;
+  width: 100%;
+  margin: 0 0.15rem 0 0.15rem;
+  border: 3px #E9EFC0 solid;
+  border-radius: 10px;
+  padding: 0.8rem 0.5rem 0.5rem 0.5rem;
+}
+
+ul li a img {
+  text-align: center;
+  width: 100%;
+}
+
+ul li p {
+  text-align: justify;
+}
+
+figure figcaption {
+  padding: 0;
+  margin: 1rem 0 1rem 0;
+}
+
+footer {
+  padding: 1rem;
+  text-align: left;
+  display: flex;
+  width: 100%;
+}
+
+section footer article iframe {
+  border-radius: 18px;
+}
+
+section footer article p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+  height: 2rem;
+}
+
+section footer article p img {
+  margin: 0;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  float: left;
+}
+
+h4 {
+  text-align: center;
+  font-size: 120%;
+  margin: 1rem 0 0 0;
+}
+
+@media screen and (min-width: 769px) {
+  .container {
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "header header" "sidebar main";
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "sidebar" "main";
+  }
+
+  .sidebar {
+    order: 1;
+  }
+
+  main {
+    order: 2;
+  }
+}
+
