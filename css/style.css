@@ -59,13 +59,13 @@ main {
     width: 100%;
 }
 section {
-    height: 62rem;
+    height: 70rem;
     align-content: flex-start;
     display: flex;
     flex-wrap: wrap;
 }
 .third{
-    height: 62rem;
+    height: 70rem;
 }
 
 section h2 {
